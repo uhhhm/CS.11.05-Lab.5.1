@@ -1,6 +1,6 @@
 # CS.11.XX-Lab
 
-In this lab, a dataset that contains information about a country's food waste and poverty information is being read into various arrays as listed below:
+In this lab, a dataset that contains information about many countries food waste and poverty information is being read into various arrays as listed below:
 <pre>
 countries - An array containing the list of countries
 
@@ -32,10 +32,10 @@ Conversely, countries[148] contains "Zimbabwe", the last country available in th
 <br />
 <br />
 All of a country's data can be found in its corresponding index. This means for example, Albania's data will be found on index 0 for all of the other array's (totalWasteKgPerCapita[0] will contain Albania's total amount of food wasted in kg per capita per year, confidences[0] will contain the confidence level of the food waste figures being accurate for Albania, percentagesShareInPoverty[0] will contain the percentage of Albanians living on less than $30 USD per day, etc...).
-This is also true for Zimbabwe where all it's corresponding data will be found in all other arrays in index 148.
+This is also true for Zimbabwe where all its corresponding data will be found in all other arrays in index 148.
 <br />
 <br />
-Your task is to choose one of these metrics above in the given array to find either the mean, median, min, or max values. This will be computed in the corresponding method in the Main class. For example, if you wanted to find the median value for for food waste in retail in kg per capita per year for all countries, you would write your solution in the method: medianRetailEstimateKgPerCapitaPerYear().
+Your task is to choose one of these metrics above in and use the given array to find either the mean, median, min, or max values. This will be computed in the corresponding method in the Main class. For example, if you wanted to find the median value for for food waste in retail in kg per capita per year for all countries, you would write your solution in the method: medianRetailEstimateKgPerCapitaPerYear().
 <br />
 <br />
 There are also miscellaneous methods that require more complicated logic which can be done as further work. These are:
@@ -47,9 +47,13 @@ There are also miscellaneous methods that require more complicated logic which c
 
 Explanation: 
 1. getCountryTotalWastePerYear takes in the country to find its total waste per capita per year in kg
-2. getCountriesWithHighestPovertyPercentage returns an array of countries with the highest % of it's population living in poverty 
+2. getCountriesWithHighestPovertyPercentage returns an array of countries with the highest % of its population living in poverty 
 3. getCountriesWithHighConfidence returns an array of countries where the confidence of its food waste data is high
 4. getCountryWithMostWastePerCapita returns the country with the highest total waste per capita per year in kg
+
+## Extension
+
+If the miscellaneous methods have also been completed, I encourage you to explore the dataset on your own in the Explore class. The arrays can be initialised by calling the setUp() method. See what you can come up with! If you're stuck, maybe create a method to find the country associated with those minimum and maximum values for one of the metrics to start.
 
 # Dataset
 

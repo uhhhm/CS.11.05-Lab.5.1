@@ -229,6 +229,7 @@ public class Tests {
      * Misc Tests
      **************************************************************************************************************/
 
+    @Test
     public void getCountryTotalWastePerYear()
     {
         assertEquals(127, Main.getCountryTotalWastePerYear("Albania", countries, totalWasteKgPerCapitaPerYear));
@@ -236,6 +237,7 @@ public class Tests {
         assertEquals(139, Main.getCountryTotalWastePerYear("United States of America", countries, totalWasteKgPerCapitaPerYear));
     }
 
+    @Test
     public void getCountriesWithHighestPovertyPercentage()
     {
         List<String> countries = Arrays.asList(Main.getCountriesWithHighestPovertyPercentage(this.countries, percentagesShareInPoverty));
@@ -246,6 +248,7 @@ public class Tests {
         assertEquals(4, countries.size());
     }
 
+    @Test
     public void getCountriesWithHighConfidence()
     {
         List<String> countries = Arrays.asList(Main.getCountriesWithHighConfidence(this.countries, confidences));
@@ -260,9 +263,11 @@ public class Tests {
 
         assertEquals(8, countries.size());
     }
-
+    
+    @Test
     public void getCountryWithMostWastePerCapita()
     {
         assertEquals("Malaysia", Main.getCountryWithMostWastePerCapita(countries, totalWasteKgPerCapitaPerYear));
     }
+    
 }
