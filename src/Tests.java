@@ -1,4 +1,5 @@
 import static org.junit.Assert.assertEquals;
+
 import static org.junit.Assert.assertTrue;
 
 import org.junit.*;
@@ -10,15 +11,15 @@ public class Tests {
     String[] countries;
     int[] totalWasteKgPerCapitaPerYear;
     int[] householdEstimatesKgPerCapitaPerYear;
-    int[] householdEstimateTonnesPerYear;
-    int[] retailEstimateKgPerCapitaPerYear;
-    int[] retailEstimateTonnesPerYear;
-    int[] foodServiceEstimateKgPerCapitaPerYear;
-    int[] foodServiceEstimateTonnesPerYear;
-    String[] confidence;
-    String[] region;
-    String[] year;
-    double[] percentageShareInPoverty;
+    int[] householdEstimatesTonnesPerYear;
+    int[] retailEstimatesKgPerCapitaPerYear;
+    int[] retailEstimatesTonnesPerYear;
+    int[] foodServiceEstimatesKgPerCapitaPerYear;
+    int[] foodServiceEstimatesTonnesPerYear;
+    String[] confidences;
+    String[] regions;
+    String[] years;
+    double[] percentagesShareInPoverty;
 
     @Before
     public void setUp()
@@ -28,15 +29,15 @@ public class Tests {
         countries = CSVReader.countries.toArray(new String[CSVReader.countries.size()]);
         totalWasteKgPerCapitaPerYear = CSVReader.totalWasteKgPerCapitaPerYear.stream().mapToInt(i -> i).toArray();
         householdEstimatesKgPerCapitaPerYear = CSVReader.householdEstimatesKgPerCapitaPerYear.stream().mapToInt(i -> i).toArray();
-        householdEstimateTonnesPerYear = CSVReader.householdEstimateTonnesPerYear.stream().mapToInt(i -> i).toArray();
-        retailEstimateKgPerCapitaPerYear = CSVReader.retailEstimateKgPerCapitaPerYear.stream().mapToInt(i -> i).toArray();
-        retailEstimateTonnesPerYear = CSVReader.retailEstimateTonnesPerYear.stream().mapToInt(i -> i).toArray();
-        foodServiceEstimateKgPerCapitaPerYear = CSVReader.foodServiceEstimateKgPerCapitaPerYear.stream().mapToInt(i -> i).toArray();
-        foodServiceEstimateTonnesPerYear = CSVReader.foodServiceEstimateTonnesPerYear.stream().mapToInt(i -> i).toArray();
-        confidence = CSVReader.confidence.toArray(new String[CSVReader.confidence.size()]);
-        region = CSVReader.region.toArray(new String[CSVReader.region.size()]);
-        year = CSVReader.year.toArray(new String[CSVReader.year.size()]);
-        percentageShareInPoverty = CSVReader.percentageShareInPoverty.stream().mapToDouble(i -> i).toArray();
+        householdEstimatesTonnesPerYear = CSVReader.householdEstimateTonnesPerYear.stream().mapToInt(i -> i).toArray();
+        retailEstimatesKgPerCapitaPerYear = CSVReader.retailEstimateKgPerCapitaPerYear.stream().mapToInt(i -> i).toArray();
+        retailEstimatesTonnesPerYear = CSVReader.retailEstimateTonnesPerYear.stream().mapToInt(i -> i).toArray();
+        foodServiceEstimatesKgPerCapitaPerYear = CSVReader.foodServiceEstimateKgPerCapitaPerYear.stream().mapToInt(i -> i).toArray();
+        foodServiceEstimatesTonnesPerYear = CSVReader.foodServiceEstimateTonnesPerYear.stream().mapToInt(i -> i).toArray();
+        confidences = CSVReader.confidence.toArray(new String[CSVReader.confidence.size()]);
+        regions = CSVReader.region.toArray(new String[CSVReader.region.size()]);
+        years = CSVReader.year.toArray(new String[CSVReader.year.size()]);
+        percentagesShareInPoverty = CSVReader.percentageShareInPoverty.stream().mapToDouble(i -> i).toArray();
 
     }
 
@@ -53,37 +54,37 @@ public class Tests {
     @Test
     public void meanHouseholdEstimatesKgPerCapitaPerYear()
     {
-        assertEquals(86, Main.meanHouseholdEstimatesKgPerCapitaPerYear(householdEstimatesKgPerCapitaPerYear));
+        assertEquals(86, Main.meanHouseholdEstimateKgPerCapitaPerYear(householdEstimatesKgPerCapitaPerYear));
     }
 
     @Test
     public void householdEstimateTonnesPerYear()
     {
-        assertEquals(3383046, Main.meanHouseholdEstimateTonnesPerYear(householdEstimateTonnesPerYear));
+        assertEquals(3383046, Main.meanHouseholdEstimateTonnesPerYear(householdEstimatesTonnesPerYear));
     }
 
     @Test
     public void meanRetailEstimateKgPerCapitaPerYear()
     {
-        assertEquals(16, Main.meanRetailEstimateKgPerCapitaPerYear(retailEstimateKgPerCapitaPerYear));
+        assertEquals(16, Main.meanRetailEstimateKgPerCapitaPerYear(retailEstimatesKgPerCapitaPerYear));
     }
 
     @Test
     public void meanRetailEstimateTonnesPerYear()
     {
-        assertEquals(707335, Main.meanRetailEstimateTonnesPerYear(retailEstimateTonnesPerYear));
+        assertEquals(707335, Main.meanRetailEstimateTonnesPerYear(retailEstimatesTonnesPerYear));
     }
 
     @Test
     public void meanFoodServiceEstimateKgPerCapitaPerYear()
     {
-        assertEquals(28, Main.meanFoodServiceEstimateKgPerCapitaPerYear(foodServiceEstimateKgPerCapitaPerYear));
+        assertEquals(28, Main.meanFoodServiceEstimateKgPerCapitaPerYear(foodServiceEstimatesKgPerCapitaPerYear));
     }
 
     @Test
     public void meanFoodServiceEstimateTonnesPerYear()
     {
-        assertEquals(1480947, Main.meanFoodServiceEstimateTonnesPerYear(foodServiceEstimateTonnesPerYear));
+        assertEquals(1480947, Main.meanFoodServiceEstimateTonnesPerYear(foodServiceEstimatesTonnesPerYear));
     }
 
     /**************************************************************************************************************
@@ -99,37 +100,37 @@ public class Tests {
     @Test
     public void medianHouseholdEstimatesKgPerCapitaPerYear()
     {
-        assertEquals(84, Main.medianHouseholdEstimatesKgPerCapitaPerYear(householdEstimatesKgPerCapitaPerYear));
+        assertEquals(84, Main.medianHouseholdEstimateKgPerCapitaPerYear(householdEstimatesKgPerCapitaPerYear));
     }
 
     @Test
     public void medianHouseholdEstimateTonnesPerYear()
     {
-        assertEquals(830017, Main.medianHouseholdEstimateTonnesPerYear(householdEstimateTonnesPerYear));
+        assertEquals(830017, Main.medianHouseholdEstimateTonnesPerYear(householdEstimatesTonnesPerYear));
     }
 
     @Test
     public void medianRetailEstimateKgPerCapitaPerYear()
     {
-        assertEquals(16, Main.medianRetailEstimateKgPerCapitaPerYear(retailEstimateKgPerCapitaPerYear));
+        assertEquals(16, Main.medianRetailEstimateKgPerCapitaPerYear(retailEstimatesKgPerCapitaPerYear));
     }
 
     @Test
     public void medianRetailEstimateTonnesPerYear()
     {
-        assertEquals(137260, Main.medianRetailEstimateTonnesPerYear(retailEstimateTonnesPerYear));
+        assertEquals(137260, Main.medianRetailEstimateTonnesPerYear(retailEstimatesTonnesPerYear));
     }
 
     @Test
     public void medianFoodServiceEstimateKgPerCapitaPerYear()
     {
-        assertEquals(28, Main.medianFoodServiceEstimateKgPerCapitaPerYear(foodServiceEstimateKgPerCapitaPerYear));
+        assertEquals(28, Main.medianFoodServiceEstimateKgPerCapitaPerYear(foodServiceEstimatesKgPerCapitaPerYear));
     }
 
     @Test
     public void medianFoodServiceEstimateTonnesPerYear()
     {
-        assertEquals(261488, Main.medianFoodServiceEstimateTonnesPerYear(foodServiceEstimateTonnesPerYear));
+        assertEquals(261488, Main.medianFoodServiceEstimateTonnesPerYear(foodServiceEstimatesTonnesPerYear));
     }
 
     /**************************************************************************************************************
@@ -145,37 +146,37 @@ public class Tests {
     @Test
     public void minHouseholdEstimatesKgPerCapitaPerYear()
     {
-        assertEquals(34, Main.minHouseholdEstimatesKgPerCapitaPerYear(householdEstimatesKgPerCapitaPerYear));
+        assertEquals(34, Main.minHouseholdEstimateKgPerCapitaPerYear(householdEstimatesKgPerCapitaPerYear));
     }
 
     @Test
     public void minHouseholdEstimateTonnesPerYear()
     {
-        assertEquals(850, Main.minHouseholdEstimateTonnesPerYear(householdEstimateTonnesPerYear));
+        assertEquals(850, Main.minHouseholdEstimateTonnesPerYear(householdEstimatesTonnesPerYear));
     }
 
     @Test
     public void minRetailEstimateKgPerCapitaPerYear()
     {
-        assertEquals(4, Main.minRetailEstimateKgPerCapitaPerYear(retailEstimateKgPerCapitaPerYear));
+        assertEquals(4, Main.minRetailEstimateKgPerCapitaPerYear(retailEstimatesKgPerCapitaPerYear));
     }
 
     @Test
     public void minRetailEstimateTonnesPerYear()
     {
-        assertEquals(138, Main.minRetailEstimateTonnesPerYear(retailEstimateTonnesPerYear));
+        assertEquals(138, Main.minRetailEstimateTonnesPerYear(retailEstimatesTonnesPerYear));
     }
 
     @Test
     public void minFoodServiceEstimateKgPerCapitaPerYear()
     {
-        assertEquals(3, Main.minFoodServiceEstimateKgPerCapitaPerYear(foodServiceEstimateKgPerCapitaPerYear));
+        assertEquals(3, Main.minFoodServiceEstimateKgPerCapitaPerYear(foodServiceEstimatesKgPerCapitaPerYear));
     }
 
     @Test
     public void minFoodServiceEstimateTonnesPerYear()
     {
-        assertEquals(276, Main.minFoodServiceEstimateTonnesPerYear(foodServiceEstimateTonnesPerYear));
+        assertEquals(276, Main.minFoodServiceEstimateTonnesPerYear(foodServiceEstimatesTonnesPerYear));
     }
 
     /**************************************************************************************************************
@@ -191,37 +192,37 @@ public class Tests {
     @Test
     public void maxHouseholdEstimatesKgPerCapitaPerYear()
     {
-        assertEquals(189, Main.maxHouseholdEstimatesKgPerCapitaPerYear(householdEstimatesKgPerCapitaPerYear));
+        assertEquals(189, Main.maxHouseholdEstimateKgPerCapitaPerYear(householdEstimatesKgPerCapitaPerYear));
     }
 
     @Test
     public void maxHouseholdEstimateTonnesPerYear()
     {
-        assertEquals(91646213, Main.maxHouseholdEstimateTonnesPerYear(householdEstimateTonnesPerYear));
+        assertEquals(91646213, Main.maxHouseholdEstimateTonnesPerYear(householdEstimatesTonnesPerYear));
     }
 
     @Test
     public void maxRetailEstimateKgPerCapitaPerYear()
     {
-        assertEquals(79, Main.maxRetailEstimateKgPerCapitaPerYear(retailEstimateKgPerCapitaPerYear));
+        assertEquals(79, Main.maxRetailEstimateKgPerCapitaPerYear(retailEstimatesKgPerCapitaPerYear));
     }
 
     @Test
     public void maxRetailEstimateTonnesPerYear()
     {
-        assertEquals(22424705, Main.maxRetailEstimateTonnesPerYear(retailEstimateTonnesPerYear));
+        assertEquals(22424705, Main.maxRetailEstimateTonnesPerYear(retailEstimatesTonnesPerYear));
     }
 
     @Test
     public void maxFoodServiceEstimateKgPerCapitaPerYear()
     {
-        assertEquals(90, Main.maxFoodServiceEstimateKgPerCapitaPerYear(foodServiceEstimateKgPerCapitaPerYear));
+        assertEquals(90, Main.maxFoodServiceEstimateKgPerCapitaPerYear(foodServiceEstimatesKgPerCapitaPerYear));
     }
 
     @Test
     public void maxFoodServiceEstimateTonnesPerYear()
     {
-        assertEquals(65377741, Main.maxFoodServiceEstimateTonnesPerYear(foodServiceEstimateTonnesPerYear));
+        assertEquals(65377741, Main.maxFoodServiceEstimateTonnesPerYear(foodServiceEstimatesTonnesPerYear));
     }
 
     /**************************************************************************************************************
@@ -237,7 +238,7 @@ public class Tests {
 
     public void getCountriesWithHighestPovertyPercentage()
     {
-        List<String> countries = Arrays.asList(Main.getCountriesWithHighestPovertyPercentage(this.countries, percentageShareInPoverty));
+        List<String> countries = Arrays.asList(Main.getCountriesWithHighestPovertyPercentage(this.countries, percentagesShareInPoverty));
         assertTrue(countries.contains("Guinea-Bissau"));
         assertTrue(countries.contains("Madagascar"));
         assertTrue(countries.contains("Mali"));
@@ -247,7 +248,7 @@ public class Tests {
 
     public void getCountriesWithHighConfidence()
     {
-        List<String> countries = Arrays.asList(Main.getCountriesWithHighConfidence(this.countries, confidence));
+        List<String> countries = Arrays.asList(Main.getCountriesWithHighConfidence(this.countries, confidences));
         assertTrue(countries.contains("Australia"));
         assertTrue(countries.contains("Austria"));
         assertTrue(countries.contains("Denmark"));

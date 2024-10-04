@@ -9,32 +9,32 @@ public class Main {
         return -1;
     }
 
-    public static int meanHouseholdEstimatesKgPerCapitaPerYear(int[] householdEstimatesKgPerCapitaPerYear)
+    public static int meanHouseholdEstimateKgPerCapitaPerYear(int[] householdEstimatesKgPerCapitaPerYear)
     {
         return -1;
     }
 
-    public static int meanHouseholdEstimateTonnesPerYear(int[] householdEstimateTonnesPerYear)
+    public static int meanHouseholdEstimateTonnesPerYear(int[] householdEstimatesTonnesPerYear)
     {
         return -1;
     }
 
-    public static int meanRetailEstimateKgPerCapitaPerYear(int[] retailEstimateKgPerCapitaPerYear)
+    public static int meanRetailEstimateKgPerCapitaPerYear(int[] retailEstimatesKgPerCapitaPerYear)
     {
         return -1;
     }
 
-    public static int meanRetailEstimateTonnesPerYear(int[] retailEstimateTonnesPerYear)
+    public static int meanRetailEstimateTonnesPerYear(int[] retailEstimatesTonnesPerYear)
     {
         return -1;
     }
 
-    public static int meanFoodServiceEstimateKgPerCapitaPerYear(int[] foodServiceEstimateKgPerCapitaPerYear)
+    public static int meanFoodServiceEstimateKgPerCapitaPerYear(int[] foodServiceEstimatesKgPerCapitaPerYear)
     {
         return -1;
     }
 
-    public static int meanFoodServiceEstimateTonnesPerYear(int[] foodServiceEstimateTonnesPerYear)
+    public static int meanFoodServiceEstimateTonnesPerYear(int[] foodServiceEstimatesTonnesPerYear)
     {
         return -1;
     }
@@ -48,32 +48,32 @@ public class Main {
         return -1;
     }
 
-    public static int medianHouseholdEstimatesKgPerCapitaPerYear(int[] householdEstimatesKgPerCapitaPerYear)
+    public static int medianHouseholdEstimateKgPerCapitaPerYear(int[] householdEstimatesKgPerCapitaPerYear)
     {
         return -1;
     }
 
-    public static int medianHouseholdEstimateTonnesPerYear(int[] householdEstimateTonnesPerYear)
+    public static int medianHouseholdEstimateTonnesPerYear(int[] householdEstimatesTonnesPerYear)
     {
         return -1;
     }
 
-    public static int medianRetailEstimateKgPerCapitaPerYear(int[] retailEstimateKgPerCapitaPerYear)
+    public static int medianRetailEstimateKgPerCapitaPerYear(int[] retailEstimatesKgPerCapitaPerYear)
     {
         return -1;
     }
 
-    public static int medianRetailEstimateTonnesPerYear(int[] retailEstimateTonnesPerYear)
+    public static int medianRetailEstimateTonnesPerYear(int[] retailEstimatesTonnesPerYear)
     {
         return -1;
     }
 
-    public static int medianFoodServiceEstimateKgPerCapitaPerYear(int[] foodServiceEstimateKgPerCapitaPerYear)
+    public static int medianFoodServiceEstimateKgPerCapitaPerYear(int[] foodServiceEstimatesKgPerCapitaPerYear)
     {
         return -1;
     }
 
-    public static int medianFoodServiceEstimateTonnesPerYear(int[] foodServiceEstimateTonnesPerYear)
+    public static int medianFoodServiceEstimateTonnesPerYear(int[] foodServiceEstimatesTonnesPerYear)
     {
         return -1;
     }
@@ -87,32 +87,32 @@ public class Main {
         return -1;
     }
 
-    public static int minHouseholdEstimatesKgPerCapitaPerYear(int[] householdEstimatesKgPerCapitaPerYear)
+    public static int minHouseholdEstimateKgPerCapitaPerYear(int[] householdEstimatesKgPerCapitaPerYear)
     {
         return -1;
     }
 
-    public static int minHouseholdEstimateTonnesPerYear(int[] householdEstimateTonnesPerYear)
+    public static int minHouseholdEstimateTonnesPerYear(int[] householdEstimatesTonnesPerYear)
     {
         return -1;
     }
 
-    public static int minRetailEstimateKgPerCapitaPerYear(int[] retailEstimateKgPerCapitaPerYear)
+    public static int minRetailEstimateKgPerCapitaPerYear(int[] retailEstimatesKgPerCapitaPerYear)
     {
         return -1;
     }
 
-    public static int minRetailEstimateTonnesPerYear(int[] retailEstimateTonnesPerYear)
+    public static int minRetailEstimateTonnesPerYear(int[] retailEstimatesTonnesPerYear)
     {
         return -1;
     }
 
-    public static int minFoodServiceEstimateKgPerCapitaPerYear(int[] foodServiceEstimateKgPerCapitaPerYear)
+    public static int minFoodServiceEstimateKgPerCapitaPerYear(int[] foodServiceEstimatesKgPerCapitaPerYear)
     {
         return -1;
     }
 
-    public static int minFoodServiceEstimateTonnesPerYear(int[] foodServiceEstimateTonnesPerYear)
+    public static int minFoodServiceEstimateTonnesPerYear(int[] foodServiceEstimatesTonnesPerYear)
     {
         return -1;
     }
@@ -126,32 +126,32 @@ public class Main {
         return -1;
     }
 
-    public static int maxHouseholdEstimatesKgPerCapitaPerYear(int[] householdEstimatesKgPerCapitaPerYear)
+    public static int maxHouseholdEstimateKgPerCapitaPerYear(int[] householdEstimatesKgPerCapitaPerYear)
     {
         return -1;
     }
 
-    public static int maxHouseholdEstimateTonnesPerYear(int[] householdEstimateTonnesPerYear)
+    public static int maxHouseholdEstimateTonnesPerYear(int[] householdEstimatesTonnesPerYear)
     {
         return -1;
     }
 
-    public static int maxRetailEstimateKgPerCapitaPerYear(int[] retailEstimateKgPerCapitaPerYear)
+    public static int maxRetailEstimateKgPerCapitaPerYear(int[] retailEstimatesKgPerCapitaPerYear)
     {
         return -1;
     }
 
-    public static int maxRetailEstimateTonnesPerYear(int[] retailEstimateTonnesPerYear)
+    public static int maxRetailEstimateTonnesPerYear(int[] retailEstimatesTonnesPerYear)
     {
         return -1;
     }
 
-    public static int maxFoodServiceEstimateKgPerCapitaPerYear(int[] foodServiceEstimateKgPerCapitaPerYear)
+    public static int maxFoodServiceEstimateKgPerCapitaPerYear(int[] foodServiceEstimatesKgPerCapitaPerYear)
     {
         return -1;
     }
 
-    public static int maxFoodServiceEstimateTonnesPerYear(int[] foodServiceEstimateTonnesPerYear)
+    public static int maxFoodServiceEstimateTonnesPerYear(int[] foodServiceEstimatesTonnesPerYear)
     {
         return -1;
     }
@@ -165,12 +165,12 @@ public class Main {
         return "";
     }
 
-    public static String[] getCountriesWithHighestPovertyPercentage(String[] countries, double[] percentageShareInPoverty)
+    public static String[] getCountriesWithHighestPovertyPercentage(String[] countries, double[] percentagesShareInPoverty)
     {
         return new String[0];
     }
 
-    public static String[] getCountriesWithHighConfidence(String[] countries, String[] confidence)
+    public static String[] getCountriesWithHighConfidence(String[] countries, String[] confidences)
     {
         return new String[0];
     }
