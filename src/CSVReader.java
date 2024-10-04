@@ -8,7 +8,7 @@ public class CSVReader {
 
     //1
     static ArrayList<String> countries = new ArrayList<>();
-    static ArrayList<String> combinedFiguresKgPerCapitaPerYear = new ArrayList<>();
+    static ArrayList<String> totalWasteKgPerCapitaPerYear = new ArrayList<>();
     static ArrayList<String> householdEstimatesKgPerCapitaPerYear = new ArrayList<>();
     static ArrayList<String> householdEstimateTonnesPerYear = new ArrayList<>();
     static ArrayList<String> retailEstimateKgPerCapitaPerYear = new ArrayList<>();
@@ -44,7 +44,7 @@ public class CSVReader {
                     switch(i)
                     {
                         case 1 -> countries.add(values[i]);
-                        case 2 -> combinedFiguresKgPerCapitaPerYear.add(values[i]);
+                        case 2 -> totalWasteKgPerCapitaPerYear.add(values[i]);
                         case 3 -> householdEstimatesKgPerCapitaPerYear.add(values[i]);
                         case 4 -> householdEstimateTonnesPerYear.add(values[i]);
                         case 5 -> retailEstimateKgPerCapitaPerYear.add(values[i]);
@@ -71,4 +71,6 @@ public class CSVReader {
         }
         
     }
+
+    
 }
