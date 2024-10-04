@@ -7,24 +7,37 @@ import java.util.ArrayList;
 public class CSVReader {
 
     //1
-    static ArrayList<String> countries = new ArrayList<>();
-    static ArrayList<String> totalWasteKgPerCapitaPerYear = new ArrayList<>();
-    static ArrayList<String> householdEstimatesKgPerCapitaPerYear = new ArrayList<>();
-    static ArrayList<String> householdEstimateTonnesPerYear = new ArrayList<>();
-    static ArrayList<String> retailEstimateKgPerCapitaPerYear = new ArrayList<>();
-    static ArrayList<String> retailEstimateTonnesPerYear = new ArrayList<>();
-    static ArrayList<String> foodServiceEstimateKgPerCapitaPerYear = new ArrayList<>();
-    static ArrayList<String> foodServiceEstimateTonnesPerYear = new ArrayList<>();
-    static ArrayList<String> confidence = new ArrayList<>();
+    static ArrayList<String> countries;
+    static ArrayList<Integer> totalWasteKgPerCapitaPerYear;
+    static ArrayList<Integer> householdEstimatesKgPerCapitaPerYear;
+    static ArrayList<Integer> householdEstimateTonnesPerYear;
+    static ArrayList<Integer> retailEstimateKgPerCapitaPerYear;
+    static ArrayList<Integer> retailEstimateTonnesPerYear;
+    static ArrayList<Integer> foodServiceEstimateKgPerCapitaPerYear;
+    static ArrayList<Integer> foodServiceEstimateTonnesPerYear;
+    static ArrayList<String> confidence;
 
     //11
-    static ArrayList<String> region = new ArrayList<>();
+    static ArrayList<String> region;
     
     //14
-    static ArrayList<String> year = new ArrayList<>();
-    static ArrayList<String> percentageShareInPoverty = new ArrayList<>();
+    static ArrayList<String> year;
+    static ArrayList<Double> percentageShareInPoverty;
 
     public static void populateArrays() {
+
+        countries = new ArrayList<>();
+        totalWasteKgPerCapitaPerYear = new ArrayList<>();
+        householdEstimatesKgPerCapitaPerYear = new ArrayList<>();
+        householdEstimateTonnesPerYear = new ArrayList<>();
+        retailEstimateKgPerCapitaPerYear = new ArrayList<>();
+        retailEstimateTonnesPerYear = new ArrayList<>();
+        foodServiceEstimateKgPerCapitaPerYear = new ArrayList<>();
+        foodServiceEstimateTonnesPerYear = new ArrayList<>();
+        confidence = new ArrayList<>();
+        region = new ArrayList<>();
+        year = new ArrayList<>();
+        percentageShareInPoverty = new ArrayList<>();
 
         File file = new File("src/combined_data.csv");
 
@@ -41,22 +54,47 @@ public class CSVReader {
                 String[] values = line.split(",");
                 for (int i = 0; i < numCols; i++)
                 {
+
                     switch(i)
                     {
                         case 1 -> countries.add(values[i]);
-                        case 2 -> totalWasteKgPerCapitaPerYear.add(values[i]);
-                        case 3 -> householdEstimatesKgPerCapitaPerYear.add(values[i]);
-                        case 4 -> householdEstimateTonnesPerYear.add(values[i]);
-                        case 5 -> retailEstimateKgPerCapitaPerYear.add(values[i]);
-                        case 6 -> retailEstimateTonnesPerYear.add(values[i]);
-                        case 7 -> foodServiceEstimateKgPerCapitaPerYear.add(values[i]);
-                        case 8 -> foodServiceEstimateTonnesPerYear.add(values[i]);
+                        case 2 -> {
+                            int value = Integer.parseInt(values[i]);
+                            totalWasteKgPerCapitaPerYear.add(value);
+                            }
+                        case 3 -> {
+                            int value = Integer.parseInt(values[i]);
+                            householdEstimatesKgPerCapitaPerYear.add(value);
+                        }
+                        case 4 -> {
+                            int value = Integer.parseInt(values[i]);
+                            householdEstimateTonnesPerYear.add(value);
+                        }
+                        case 5 -> {
+                            int value = Integer.parseInt(values[i]);
+                            retailEstimateKgPerCapitaPerYear.add(value);
+                        }
+                        case 6 -> {
+                            int value = Integer.parseInt(values[i]);
+                            retailEstimateTonnesPerYear.add(value);
+                        }
+                        case 7 -> {
+                            int value = Integer.parseInt(values[i]);
+                            foodServiceEstimateKgPerCapitaPerYear.add(value);
+                        }
+                        case 8 -> {
+                            int value = Integer.parseInt(values[i]);
+                            foodServiceEstimateTonnesPerYear.add(value);
+                        }
                         case 9 -> confidence.add(values[i]);
     
                         case 11 -> region.add(values[i]);
     
                         case 14 -> year.add(values[i]);
-                        case 15 -> percentageShareInPoverty.add(values[i]);
+                        case 15 -> {
+                            double value = Double.parseDouble(values[i]);
+                            percentageShareInPoverty.add(value);
+                        }
                         
                         default -> {
                         }

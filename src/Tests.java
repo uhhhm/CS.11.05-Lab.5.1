@@ -1,5 +1,4 @@
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.*;
@@ -9,37 +8,36 @@ import java.util.List;
 public class Tests {
 
     String[] countries;
-    String[] totalWasteKgPerCapitaPerYear;
-    String[] householdEstimatesKgPerCapitaPerYear;
-    String[] householdEstimateTonnesPerYear;
-    String[] retailEstimateKgPerCapitaPerYear;
-    String[] retailEstimateTonnesPerYear;
-    String[] foodServiceEstimateKgPerCapitaPerYear;
-    String[] foodServiceEstimateTonnesPerYear;
+    int[] totalWasteKgPerCapitaPerYear;
+    int[] householdEstimatesKgPerCapitaPerYear;
+    int[] householdEstimateTonnesPerYear;
+    int[] retailEstimateKgPerCapitaPerYear;
+    int[] retailEstimateTonnesPerYear;
+    int[] foodServiceEstimateKgPerCapitaPerYear;
+    int[] foodServiceEstimateTonnesPerYear;
     String[] confidence;
     String[] region;
     String[] year;
-    String[] percentageShareInPoverty;
+    double[] percentageShareInPoverty;
 
     @Before
     public void setUp()
     {
         CSVReader.populateArrays();
 
-        CSVReader.populateArrays();
-
         countries = CSVReader.countries.toArray(new String[CSVReader.countries.size()]);
-        totalWasteKgPerCapitaPerYear = CSVReader.totalWasteKgPerCapitaPerYear.toArray(new String[CSVReader.totalWasteKgPerCapitaPerYear.size()]);
-        householdEstimatesKgPerCapitaPerYear = CSVReader.householdEstimatesKgPerCapitaPerYear.toArray(new String[CSVReader.householdEstimatesKgPerCapitaPerYear.size()]);
-        householdEstimateTonnesPerYear = CSVReader.householdEstimateTonnesPerYear.toArray(new String[CSVReader.householdEstimateTonnesPerYear.size()]);
-        retailEstimateKgPerCapitaPerYear = CSVReader.retailEstimateKgPerCapitaPerYear.toArray(new String[CSVReader.retailEstimateKgPerCapitaPerYear.size()]);
-        retailEstimateTonnesPerYear = CSVReader.retailEstimateTonnesPerYear.toArray(new String[CSVReader.retailEstimateTonnesPerYear.size()]);
-        foodServiceEstimateKgPerCapitaPerYear = CSVReader.foodServiceEstimateKgPerCapitaPerYear.toArray(new String[CSVReader.foodServiceEstimateKgPerCapitaPerYear.size()]);
-        foodServiceEstimateTonnesPerYear = CSVReader.foodServiceEstimateTonnesPerYear.toArray(new String[CSVReader.foodServiceEstimateTonnesPerYear.size()]);
+        totalWasteKgPerCapitaPerYear = CSVReader.totalWasteKgPerCapitaPerYear.stream().mapToInt(i -> i).toArray();
+        householdEstimatesKgPerCapitaPerYear = CSVReader.householdEstimatesKgPerCapitaPerYear.stream().mapToInt(i -> i).toArray();
+        householdEstimateTonnesPerYear = CSVReader.householdEstimateTonnesPerYear.stream().mapToInt(i -> i).toArray();
+        retailEstimateKgPerCapitaPerYear = CSVReader.retailEstimateKgPerCapitaPerYear.stream().mapToInt(i -> i).toArray();
+        retailEstimateTonnesPerYear = CSVReader.retailEstimateTonnesPerYear.stream().mapToInt(i -> i).toArray();
+        foodServiceEstimateKgPerCapitaPerYear = CSVReader.foodServiceEstimateKgPerCapitaPerYear.stream().mapToInt(i -> i).toArray();
+        foodServiceEstimateTonnesPerYear = CSVReader.foodServiceEstimateTonnesPerYear.stream().mapToInt(i -> i).toArray();
         confidence = CSVReader.confidence.toArray(new String[CSVReader.confidence.size()]);
         region = CSVReader.region.toArray(new String[CSVReader.region.size()]);
         year = CSVReader.year.toArray(new String[CSVReader.year.size()]);
-        percentageShareInPoverty = CSVReader.percentageShareInPoverty.toArray(new String[CSVReader.percentageShareInPoverty.size()]);
+        percentageShareInPoverty = CSVReader.percentageShareInPoverty.stream().mapToDouble(i -> i).toArray();
+
     }
 
     /**************************************************************************************************************
@@ -181,7 +179,7 @@ public class Tests {
     }
 
     /**************************************************************************************************************
-     * Testing for the minimums
+     * Testing for the maximums
      **************************************************************************************************************/
 
     @Test
@@ -239,7 +237,7 @@ public class Tests {
 
     public void getCountriesWithHighestPovertyPercentage()
     {
-        List<String> countries = Arrays.asList(Main.getCountriesWithHighestPovertyPercentage(countries, percentageShareInPoverty));
+        List<String> countries = Arrays.asList(Main.getCountriesWithHighestPovertyPercentage(this.countries, percentageShareInPoverty));
         assertTrue(countries.contains("Guinea-Bissau"));
         assertTrue(countries.contains("Madagascar"));
         assertTrue(countries.contains("Mali"));
@@ -249,7 +247,7 @@ public class Tests {
 
     public void getCountriesWithHighConfidence()
     {
-        List<String> countries = Arrays.asList(Main.getCountriesWithHighConfidence(countries, confidence));
+        List<String> countries = Arrays.asList(Main.getCountriesWithHighConfidence(this.countries, confidence));
         assertTrue(countries.contains("Australia"));
         assertTrue(countries.contains("Austria"));
         assertTrue(countries.contains("Denmark"));
