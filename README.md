@@ -18,7 +18,7 @@ foodServiceEstimatesKgPerCapitaPerYear - An array containing the total food serv
 
 foodServiceEstimatesTonnesPerYear - An array containing the food service food waste in tonnes by a country per year
 
-confidences - An array containing the level of confidence in the food waste figures being accurate for a given country
+confidences - An array containing the level of confidence in the food waste figures being accurate for a given country. This ranges from "Very Low Confidence", "Low Confidence", "Medium Confidence", and "High Confidence".
 
 regions - An array containing the part of the world the a given is in
 
@@ -40,16 +40,16 @@ Your task is to choose one of these metrics above in and use the given array to 
 <br />
 There are also miscellaneous methods that require more complicated logic which can be done as further work. These are:
 
-1. getCountryTotalWastePerYear(country, countries, totalWasteKgPerCapitaPerYear), 
-2. getCountriesWithHighestPovertyPercentage(countries, percentagesShareInPoverty)
-3. getCountriesWithHighConfidence(countries, confidences)
-4. getCountryWithMostWastePerCapita(countries, totalWasteKgPerCapitaPerYear)
+1. getCountryTotalWastePerYear(country, countries, totalWasteKgPerCapitaPerYear) 
+2. getCountryWithMostWastePerCapita(countries, totalWasteKgPerCapitaPerYear)
+3. getCountriesWithHighestPovertyPercentage(countries, percentagesShareInPoverty)
+4. getCountriesWithHighConfidence(countries, confidences)
 
 Explanation: 
 1. getCountryTotalWastePerYear takes in the country to find its total waste per capita per year in kg
-2. getCountriesWithHighestPovertyPercentage returns an array of countries with the highest % of its population living in poverty 
-3. getCountriesWithHighConfidence returns an array of countries where the confidence of its food waste data is high
-4. getCountryWithMostWastePerCapita returns the country with the highest total waste per capita per year in kg
+2. getCountryWithMostWastePerCapita returns the country with the highest total waste per capita per year in kg
+3. getCountriesWithHighestPovertyPercentage returns an array of countries with the highest % of its population living in poverty 
+4. getCountriesWithHighConfidence returns an array of countries where the confidence of its food waste data is high
 
 ## Extension
 

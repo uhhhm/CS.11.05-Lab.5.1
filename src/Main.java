@@ -165,6 +165,11 @@ public class Main {
         return "";
     }
 
+    public static String getCountryWithMostWastePerCapita(String[] countries, int[] totalWasteKgPerCapitaPerYear)
+    {
+        return "";
+    }
+
     public static String[] getCountriesWithHighestPovertyPercentage(String[] countries, double[] percentagesShareInPoverty)
     {
         return new String[0];
@@ -174,13 +179,4 @@ public class Main {
     {
         return new String[0];
     }
-
-    public static String getCountryWithMostWastePerCapita(String[] countries, int[] totalWasteKgPerCapitaPerYear)
-    {
-        return "";
-    }
-
-    /**
-     * Use the values found in the min and max methods to find the associated country
-     */
 }

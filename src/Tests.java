@@ -238,6 +238,12 @@ public class Tests {
     }
 
     @Test
+    public void getCountryWithMostWastePerCapita()
+    {
+        assertEquals("Malaysia", Main.getCountryWithMostWastePerCapita(countries, totalWasteKgPerCapitaPerYear));
+    }
+
+    @Test
     public void getCountriesWithHighestPovertyPercentage()
     {
         List<String> countries = Arrays.asList(Main.getCountriesWithHighestPovertyPercentage(this.countries, percentagesShareInPoverty));
@@ -262,12 +268,6 @@ public class Tests {
         assertTrue(countries.contains("United States of America"));
 
         assertEquals(8, countries.size());
-    }
-    
-    @Test
-    public void getCountryWithMostWastePerCapita()
-    {
-        assertEquals("Malaysia", Main.getCountryWithMostWastePerCapita(countries, totalWasteKgPerCapitaPerYear));
     }
     
 }

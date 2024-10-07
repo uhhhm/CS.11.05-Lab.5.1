@@ -20,7 +20,7 @@ public class Explore {
     }
 
     /**
-     * Method that sets up the data into the array
+     * Method that sets up the data into the arrays
      */
     public static void setUp()
     {
