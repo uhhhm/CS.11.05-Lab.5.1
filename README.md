@@ -35,10 +35,10 @@ All of a country's data can be found in its corresponding index. This means for 
 This is also true for Zimbabwe where all its corresponding data will be found in all other arrays in index 148.
 <br />
 <br />
-Your task is to choose one of these metrics above in and use the given array to find either the mean, median, min, or max values. This will be computed in the corresponding method in the Main class. For example, if you wanted to find the median value for for food waste in retail in kg per capita per year for all countries, you would write your solution in the method: medianRetailEstimateKgPerCapitaPerYear().
+Your task is to choose one of these metrics above in and use the given array to find either the mean, median, min, or max values. This will be computed in the corresponding method in the Main class. For example, if you wanted to find the median value for food waste in retail in kg per capita per year for all countries, you would write your solution in the method: medianRetailEstimateKgPerCapitaPerYear().
 <br />
 <br />
-There are also miscellaneous methods that require more complicated logic which can be done as further work. These are:
+There are also miscellaneous methods that require more complicated logic which should be done individually. These are:
 
 1. getCountryTotalWastePerYear(country, countries, totalWasteKgPerCapitaPerYear) 
 2. getCountryWithMostWastePerCapita(countries, totalWasteKgPerCapitaPerYear)
