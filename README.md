@@ -1,4 +1,4 @@
-# CS.11.XX-Lab
+# CS.11.05-Lab.5.1
 
 In this lab, a dataset that contains information about many countries food waste and poverty information is being read into various arrays as listed below:
 <pre>
